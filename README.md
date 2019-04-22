@@ -10,5 +10,11 @@ For this second reason, a low cost option was preferred and the Arduino platform
 
 The question was how to get such data into a file, so it could be analyse afterwards.
 
+### Test1:
 
+The ADC clock prescaler makes no difference as it is the serial transfer that is limiting the speed of the acquisition. The time between two points is of 595us.
+
+### Test2:
+
+I also tried using a buffer to store the data on the Arduino side, and then send it in one go through the serial. This lead to a 120us interval between data points in each buffer, but to 125ms gap between data buffers. Again, the prescaler had no influence.
 
